@@ -1,0 +1,346 @@
+@keyframes horizontalGridMove {
+  from {margin-left: 0px}
+  to {margin-left: -20000px}
+}
+
+@keyframes horizontalShipMove {
+  from {margin-left: 0px}
+  to {margin-left: 20000px}
+}
+
+@keyframes fadein {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+@keyframes shipsMovin1 {
+  0% {margin-top: 200px}
+  35% {margin-top: 361px}
+  55% {margin-top: 295px}
+  78% {margin-top: 400px}
+  100% {margin-top: 200px}
+}
+
+@keyframes shipsMovin2 {
+  0% {margin-right: 500px}
+  21% {margin-right: 290px}
+  44% {margin-right: 345px}
+  90% {margin-right: 900px}
+  100% {margin-right: 500px}
+}
+
+@keyframes moonMovin {
+  0% {margin-top: 420px}
+  31% {margin-top: 200px}
+  69% {margin-top: -100px}
+  100% {margin-top: 420px}
+}
+
+html, body {
+  max-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  color: #f9f1f1;
+  font-family: 'Indie Flower', cursive;
+}
+
+html {
+  background-size: cover;
+  background-image: url(./src/images/space.png);
+  background-repeat: no-repeat;
+}
+
+.ship-images {
+  height: 66px;
+  width: 66px;
+  margin-left: 0px;
+  z-index: 1;
+  margin-top: 0px;
+  position: none;
+}
+
+.row {
+  border-bottom: 5px solid black;
+  margin-bottom: 90px;
+  z-index: -1;
+}
+
+#row-1 {
+  margin-top: 90px;
+}
+
+#row-5 {
+  border-bottom: none;
+}
+
+.ship-button {
+  height: 140px;
+  width: 140px;
+  background-color: transparent;
+  border: none;
+  margin-right: 100px;
+  margin-left: 140px;
+  margin-top: 200px
+}
+
+.ship-button:hover, .button:hover {
+  cursor: pointer
+}
+
+.ship-button .ship-images, #player-ship .ship-images {
+  height: 140px;
+  width: 140px
+}
+
+#grid {
+  width: 20000px;
+  max-height: 750px;
+  margin-left: 0px;
+}
+
+.cat-images {
+  height: 66px;
+  width: 66px;
+  margin-top: 0px;
+  margin-left: 0px;
+  position: absolute    
+}
+
+#moon {
+  margin-left: 20015px;
+  position: absolute;
+  max-height: 1000px;
+  max-width: 1000px;
+  margin-top: -350px;
+}
+
+#to-the-moon-button {
+  margin-top: -10px;
+  width: 200px
+}
+
+.endgame-divs {
+  border: solid black 2.2px;
+  width: 220px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
+  margin-top: 300px;
+  background-color: #536872;
+  border: solid #426761 6px;
+  animation-name: fadein;
+  animation-duration: 5s
+}
+
+.endgame-headers {
+  font-size: 1em;
+  order: 1
+}
+
+.endgame-phrases {
+  font-size: .8em;
+  order: 2
+}
+
+#play-again-button {
+  order: 3;
+  font-size: .8em;
+  background-color: #304050;
+  border: solid #405060 3.5px
+}
+
+header {
+  display: flex;
+  justify-content: space-between
+}
+
+.direction-buttons {
+  width: 75px;
+  height: 50px;
+  background-color: #708090;
+  border: solid #607080 5px;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-right: 50px;
+}
+
+.direction-buttons:hover {
+  cursor: pointer
+}
+
+.explosion-images {
+  width: 300px;
+  height: 300px;
+  z-index: 2;
+  position: absolute;
+  animation-name: fadein;
+  animation-duration: 1s
+}
+
+#title-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.button {
+  width: 100px;
+  height: 75px;
+  font-family: 'Indie Flower', cursive;
+  color: #f9f1f1;
+  font-size: 1.5em;
+  background-color: #708090;
+  border-radius: 50%;
+  border: solid #607080 5px;
+}
+
+#title {
+  font-size: 4em;
+  margin-top: 50px
+}
+
+#sub-title {
+  font-size: 1.5em;
+  margin-top: 275px
+}
+
+#ship-select-title {
+  font-size: 4em;
+  text-align: center;
+  animation-name: fadein;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out
+}
+
+#ship-options {
+  animation-name: fadein;
+  animation-duration: 3.5s;
+  animation-timing-function: ease-in-out
+}
+
+#ship-name-header {
+  font-size: 3em;
+  animation-name: fadein;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out
+}
+
+#ship-name-select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation-name: fadein;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out
+}
+
+#player-ship {
+  margin-top: 70px;
+  animation-name: fadein;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out
+}
+
+#ship-name-textbox {
+  margin-top: 70px;
+  margin-bottom: 50px;
+  width: 175px;
+  font-size: 1.5em;
+  font-family: 'Indie Flower', cursive;
+  background-color: transparent;
+  color: #f9f1f1
+}
+
+#game-title, #ship-title {
+  text-align: center
+}
+
+#game-title {
+  font-size: 2em
+}
+
+#ship-title {
+  font-size: 1.5em;
+  margin-top: -20px
+}
+
+#right-side {
+  display: flex;
+  flex-direction: column;
+}
+
+#instruction-div {
+  display: flex;
+  flex-direction: row;
+  width: 140px;
+  margin-top: 10px;
+  margin-left: 500px;
+  background-color: #6e7f80;
+  border-radius: 25%;
+  padding: 5px
+}
+
+#instruction-arrow {
+  margin-top: 55px;
+  margin-left: 30px
+}
+
+#instructions {
+  text-align: right;
+}
+
+#enter-grid-button {
+  width: 200px;
+  animation-name: fadein;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out
+}
+
+.opener-images {
+  width: 100px;
+  height: 100px
+}
+
+.opener-images-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 0px
+}
+
+#ship-1-opener {
+  margin-left: 50px;
+  margin-top: 200px;
+  animation-name: shipsMovin1;
+  animation-duration: 22s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear
+}
+
+#ship-2-opener {
+  margin-right: 500px;
+  margin-top: 20px;
+  animation-name: shipsMovin2;
+  animation-duration: 19s;
+  animation-delay: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear
+}
+
+#ship-3-opener {
+  margin-top: 350px;
+}
+
+#moon-opener {
+  margin-top: 420px;
+  margin-right: 100px;
+  animation-name: moonMovin;
+  animation-duration: 21s;
+  animation-delay: 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear
+}
