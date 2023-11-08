@@ -22,8 +22,10 @@ const ShipName = ({ playerShipName, setPlayerShipName, playerShip }: PropsType) 
         <div id="ship-name-select">
         <h1 id="ship-name-header">Name your ship</h1>
         <div id="player-ship">{generateImg(playerShip)}</div>
-        <input id="ship-name-textbox" placeholder="Spud's Ship" type="text" maxLength={30}></input>
+        <input id="ship-name-textbox" placeholder="Spud's Ship" type="text" maxLength={20}></input>
         <button id="enter-grid-button" className="button" onClick={() => {
+            let shipOptions = document.getElementById("ship-options");
+            (shipOptions as HTMLDivElement).style.display = "inline"
             let shipName: string = (document.getElementById("ship-name-textbox") as HTMLInputElement).value
             if (shipName === '') {
                 alert("name yo ship!")

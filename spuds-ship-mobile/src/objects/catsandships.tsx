@@ -65,16 +65,16 @@ const shipRightBorder: number = 108
 
 const shipLeftBorder: number = 8
 
-const marginsArr: MarginsType =  ["-85px", "15px", "110px", "210px", "300px"] // ["-110px", "15px", "145px", "270px", "385px"]
+const marginsArr: MarginsType =  ["-40px", "5px", "50px", "92px", "137px"]// ["-85px", "15px", "110px", "210px", "300px"] 
 
-const catMarginsArrVert: MarginsType = ["-180px", "-80px", "15px", "115px", "205px"] // ["-235px", "-110px", "20px", "145px", "260px"]
+const catMarginsArrVert: MarginsType = ["-82px", "-37px", "8px", "50px", "95px"] // ["-180px", "-80px", "15px", "115px", "205px"]
 
 function generateCatMarginsArrHor(): NumericalMarginsType {
     const arr = []
-    let currentNum = 400
+    let currentNum = 220
     do {
       arr.push(currentNum)
-      currentNum += 210
+      currentNum += 145
     } while(currentNum < 20000)
     return arr
 }

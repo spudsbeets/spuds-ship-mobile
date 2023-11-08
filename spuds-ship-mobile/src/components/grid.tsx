@@ -137,7 +137,7 @@ const Grid = ({ playerShipName, playerShip }: PropsType) => {
     if (val === "loss") {
       return loseArr[Math.floor(Math.random()*loseArr.length)]
     } else {
-      return winArr[Math.floor(Math.random()*loseArr.length)]
+      return winArr[Math.floor(Math.random()*winArr.length)]
     }
   }
 
@@ -146,7 +146,7 @@ const Grid = ({ playerShipName, playerShip }: PropsType) => {
     const moonLeftBorder = document.getElementById("moon")?.getBoundingClientRect().left as number
     for (let i = 0; i < arr.length; i++) {
       if (arr[i].getBoundingClientRect().top === shipPositionTop) {
-        if (arr[i].getBoundingClientRect().left < (shipRightBorder - 8) && arr[i].getBoundingClientRect().right > (shipLeftBorder + 26)) {
+        if (arr[i].getBoundingClientRect().left < (shipRightBorder - 50) && arr[i].getBoundingClientRect().right > (shipLeftBorder + 10)) {
           clearInterval(collisionCheck)
           clearInterval(populateInterval)
           const explosion1 = document.createElement('img')
@@ -282,7 +282,7 @@ const Grid = ({ playerShipName, playerShip }: PropsType) => {
             </div>  
             <div id="center-side">
               <div id="instruction-div">
-              <p id="instructions">use these OR your up & down arrow keys to move your ship</p>
+              <p id="instructions">use these to move your ship</p>
               <p id="instruction-arrow">&#9654;</p>
               </div>
             </div>

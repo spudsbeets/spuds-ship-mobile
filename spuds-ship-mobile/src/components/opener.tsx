@@ -8,6 +8,7 @@ const Opener = ({ setIsStart }: PropsType) => {
    
    return(
     <div id="opener">
+    <p id="rotate-message">Turn screen horizontal!</p>
     <div className="opener-images-div">
       <img className="opener-images" id="ship-1-opener" src="./src/images/zero.png" alt="ship-1"></img>
       <img className="opener-images" id="ship-2-opener" src="./src/images/one.png" alt="ship-2"></img>
